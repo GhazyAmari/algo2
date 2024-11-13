@@ -1,0 +1,24 @@
+CountSentenceAttributes(sentence):
+  
+    lengthCounter = 0
+    wordCounter = 1  // We start at 1 because we have at least one word
+    vowelCounter = 0
+
+    
+    sentence = sentence.toLowerCase()
+
+   
+    for each character in sentence:
+        // Count total characters
+        lengthCounter = lengthCounter + 1
+
+        
+        if character is 'a' or 'e' or 'i' or 'o' or 'u':
+            vowelCounter = vowelCounter + 1
+        
+        
+        if character is ' ':
+            wordCounter = wordCounter + 1
+
+    
+    return lengthCounter, wordCounter, vowelCounter
